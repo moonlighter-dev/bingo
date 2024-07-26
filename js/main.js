@@ -1,5 +1,4 @@
-// Variable Declarations
-const fullPhraseBank = [...phraseBank, ...weeklyPhrases];
+const fullPhraseBank = [...phraseBank];
 const boardSquares = document.querySelectorAll("td");
 const table = document.querySelector("tbody");
 const hiddenElements = document.querySelectorAll("[hidden]");
