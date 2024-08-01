@@ -73,9 +73,8 @@ footer {
 /* Image styling */
 
 img {
-  width: 100%; /* Full width on mobile */
-  padding-left: 0;
-  padding-right: 0; /* Remove padding to fit screen width */
+  width: 80%;
+  padding-left: 10%;
 }
 
 /* Buttons */
@@ -85,21 +84,19 @@ img {
   justify-content: space-around;
   text-align: center;
   margin-bottom: 15px;
-  max-width: 100%; /* Full width */
+  max-width: 1000px;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 section button {
   text-align: center;
-  padding: 20px; /* Smaller padding for mobile */
-  width: 90%; /* Make buttons nearly full-width */
-  max-width: 300px; /* Limit button width on large screens */
-  margin: 10px auto; /* Center buttons on small screens */
+  padding: 30px;
+  width: auto;
   border: 5px solid #D8C4E0;
   background-color: #5F259F;
   color: #fff;
   border-radius: 15px;
-  font-size: 20px; /* Smaller font size */
+  font-size: 30px;
   font-weight: 600;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   transition: 0.4s;
@@ -110,17 +107,19 @@ section button {
 
 #createBoard {
   text-align: center;
-  padding: 20px;
-  width: 90%;
-  max-width: 300px; /* Limit button width on large screens */
-  margin: 20px auto; /* Center button on small screens */
+  padding: 30px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
   border: 5px solid #5F259F;
   background-color: #D8C4E0;
   color: #5F259F;
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 300px;
+  margin-bottom: 450px;
   transition: 0.4s;
   opacity: 0.6;
 }
@@ -156,7 +155,7 @@ section button {
 /* Hover styles */
 
 #createBoard:hover {
-  transform: scale(1.2) translateY(-15px); /* Slight hover effect for mobile */
+  transform: scale(1.5) translateY(-33px);
   opacity: 1;
   box-shadow: 0 5px 1px -2px #88DBDF,
     0 10px 1px -4px #A9C47F, 0 15px 1px -6px #008675,
@@ -165,7 +164,7 @@ section button {
 
 #btnContainer button:hover {
   opacity: 1;
-  transform: scale(1.05); /* Slight hover effect for mobile */
+  transform: scale(1.1);
 }
 
 div:hover span {
@@ -232,16 +231,17 @@ td:hover {
 /* Board styles */
 
 table {
-  width: 100%; /* Table should fit the screen */
-  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
 }
 
 td {
   border: 1px outset #060808;
   color: #fff;
   box-shadow: 2px 2px #75787B, -1px -1px #75787B;
-  width: 80px; /* Smaller table cells for mobile */
-  height: 80px;
+  width: 150px;
+  height: 150px;
   position: relative;
   text-align: center;
   background-color: hsl(191, 48%, 60%);
@@ -255,32 +255,14 @@ td {
     margin-bottom: 20px;
   }
 
-  section button {
-    font-size: 18px; /* Smaller button text */
-    padding: 15px; /* Smaller padding */
-  }
-
-  #createBoard {
-    font-size: 18px;
-    margin-top: 50px; /* Adjust margins */
-    margin-bottom: 50px;
-  }
-
-  footer {
-    font-size: 14px; /* Smaller footer text */
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 30px; /* Further scale down heading size for smaller screens */
+  img {
+    width: 100%; /* Full width on mobile */
+    padding-left: 0; 
   }
 
   section button {
-    font-size: 16px; /* Smaller button text */
-    padding: 10px; /* Smaller padding */
-    width: 100%; /* Full width buttons */
+    font-size: 20px; /* Smaller button text */
+    padding: 20px; /* Smaller padding */
   }
 
   #btnContainer {
@@ -289,23 +271,23 @@ td {
   }
 
   #createBoard {
-    font-size: 16px;
-    margin-top: 30px; /* Adjust margins */
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-top: 100px; /* Adjust margins */
+    margin-bottom: 150px;
   }
 
   table {
     width: 100%; /* Table should fit the screen */
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   td {
-    width: 60px; /* Further smaller table cells */
-    height: 60px;
+    width: 80px;
+    height: 80px; /* Smaller table cells */
   }
 
   footer {
-    font-size: 12px; /* Smaller footer text */
-    margin-bottom: 5px;
+    font-size: 14px; /* Smaller footer text */
+    margin-bottom: 10px;
   }
 }
