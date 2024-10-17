@@ -1,6 +1,5 @@
 const phraseBankSelect = document.getElementById("phraseBankSelect");
 const createBoardButton = document.getElementById("createBoard");
-const selectedBank = phraseBankSelect.options[phraseBankSelect.selectedIndex].value
 
 const mainSection = document.getElementById("main");
 const boardSquares = document.querySelectorAll("td");
@@ -11,8 +10,6 @@ const btnContainer = document.getElementById("btnContainer");
 const coverAllBtn = document.getElementById("coverAll");
 const shuffleBtn = document.getElementById("shuffle");
 let coverAllMode = false;
-
-console.log("Using this phrasebank: " + selectedBank)
 
 /**
  * @typedef {Array} winningCombos
@@ -46,14 +43,15 @@ function createBoard() {
   let boardPhrases = [];
   let currentPhraseBank = []
 
-  console.log(selectedBank)
+  const selectedBank = phraseBankSelect.options[phraseBankSelect.selectedIndex].value;
+  console.log("Using this phrasebank: " + selectedBank)
 
   switch (selectedBank) {
     case "dos":
-      currentPhraseBank = dos
+      currentPhraseBank = [...dos]
       break;
     case "robertisms":
-      currentPhraseBank = robertisms
+      currentPhraseBank = [...robertisms]
       break;
     default:
       console.warn("No valid phrase bank selected");
@@ -69,6 +67,11 @@ function createBoard() {
        * @typedef {Variable} randomPhrase
        * @description This variable changes with every loop and selects a value at a random index of phraseBank.
        */
+
+      if (currentPhraseBank.length < 24) {
+        console.warn("Not enough phrases for Bingo!")
+        return 
+      }
 
       const randomPhrase =
         currentPhraseBank[Math.floor(Math.random() * currentPhraseBank.length)];
@@ -89,7 +92,6 @@ function createBoard() {
   }
   hiddenElements.forEach((element) => (element.hidden = false));
 
-  createBoardButton.remove();
 }
 
 function winningCondition() {
@@ -164,13 +166,4 @@ coverAllBtn.addEventListener("click", (event) => {
     freeSpace.innerHTML = "";
     freeSpace.className = "stamp";
   }
-});
-
-shuffleBtn.addEventListener("click", (event) => {
-  boardSquares.forEach((square) => {
-    if (square.id != "freeSpace") {
-      square.className = "";
-    }
-  });
-  createBoard();
 });

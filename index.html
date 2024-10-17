@@ -11,18 +11,15 @@
   </head>
   <body>
     <header>
-      <h1 id="headerAtTop">SFA Bingo!</h1>
+      <h1 id="headerAtTop">SFA BINGO!</h1>
     </header>
-    
-      <label for="phraseBankSelect">Choose your Bingo:</label>
-      <select id="phraseBankSelect">
-          <option value="robertisms">Robertisms</option>
-          <option value="dos">DOS</option>
-      </select>
-      <button type="button" id="createBoard">Create Board</button>
-  
     <section id="btnContainer">
-      <button id="shuffle" hidden="true">Shuffle the Board</button>
+        <select id="phraseBankSelect">
+          <option value="">--Choose your Bingo:--</option>
+          <option id="robertisms" value="robertisms">Robertisms</option>
+          <option id="dos" value="dos">DOS</option>
+      </select>
+      <button type="button" id="createBoard">New Board</button>
       <div>
         <button id="coverAll" hidden="true">Cover-all Mode: Off</button>
         <!-- <span
