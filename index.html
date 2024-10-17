@@ -1,7 +1,3 @@
-<!-- Created by Shara and James Crosslin for the 100 Devs and Learning with Leon communities. Shara planned this project, and you can find her at github.com/citizen-snipz. James handled the JavaScript logic and animations, and you can find him at github.com/mightykrakyn. Edited for use at SFASU by Dana Arroway-->
-
-<!--  This bingo project is intended for educational and entertainment purposes only. We cribbed a very basic table outline from github.com/genevievepc47/Make-Your-Own-Bingo. You can see how the code evolved over time if you look through the previous commits.Help us improve this project as you learn CSS, HTML,  JavaSript! Suggest new bingo phrases on Discord! -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="SFA Bingo" content="Bingo at SFA" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script src="js/phraseBank.js"></script>
+    
   </head>
   <body>
     <header>
       <h1 id="headerAtTop">SFA Bingo!</h1>
     </header>
-    <form id="start-form">
+    
       <label for="phraseBankSelect">Choose your Bingo:</label>
       <select id="phraseBankSelect">
           <option value="robertisms">Robertisms</option>
           <option value="dos">DOS</option>
       </select>
       <button type="button" id="createBoard">Create Board</button>
-  </form>
+  
     <section id="btnContainer">
       <button id="shuffle" hidden="true">Shuffle the Board</button>
       <div>
@@ -94,6 +90,7 @@
         >
     </p>
     </footer>
+    <script src="js/phraseBank.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

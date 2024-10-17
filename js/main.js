@@ -1,14 +1,18 @@
-const currentPhraseBank = document.getElementById("phraseBankSelect");
+const phraseBankSelect = document.getElementById("phraseBankSelect");
+const createBoardButton = document.getElementById("createBoard");
+const selectedBank = phraseBankSelect.options[phraseBankSelect.selectedIndex].value
+
+const mainSection = document.getElementById("main");
 const boardSquares = document.querySelectorAll("td");
 const table = document.querySelector("tbody");
 const hiddenElements = document.querySelectorAll("[hidden]");
-const createBoardButton = document.getElementById("createBoard");
-const mainSection = document.getElementById("main");
 const freeSpace = document.getElementById("freeSpace");
 const btnContainer = document.getElementById("btnContainer");
 const coverAllBtn = document.getElementById("coverAll");
 const shuffleBtn = document.getElementById("shuffle");
 let coverAllMode = false;
+
+console.log("Using this phrasebank: " + selectedBank)
 
 /**
  * @typedef {Array} winningCombos
@@ -40,6 +44,22 @@ const winningCombos = [
 
 function createBoard() {
   let boardPhrases = [];
+  let currentPhraseBank = []
+
+  console.log(selectedBank)
+
+  switch (selectedBank) {
+    case "dos":
+      currentPhraseBank = dos
+      break;
+    case "robertisms":
+      currentPhraseBank = robertisms
+      break;
+    default:
+      console.warn("No valid phrase bank selected");
+      return;
+  }
+
   for (let i = 0; i < 25; i++) {
     if (i === 12) {
       // index 12 is my free space which I want blank
@@ -107,7 +127,7 @@ function victory() {
 
 // Event Listeners
 
-createBoardButton.addEventListener("click", createBoard);
+createBoardButton.addEventListener("click", createBoard)
 
 /**
  * @listens table.addEventListener()
