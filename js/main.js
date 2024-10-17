@@ -51,7 +51,7 @@ function createBoard() {
        */
 
       const randomPhrase =
-        fullPhraseBank[Math.floor(Math.random() * fullPhraseBank.length)];
+        currentPhraseBank[Math.floor(Math.random() * currentPhraseBank.length)];
 
       if (!boardPhrases.includes(randomPhrase)) {
         boardPhrases.push(randomPhrase);
