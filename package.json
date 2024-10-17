@@ -1,7 +1,7 @@
 {
-  "name": "leonbingo",
+  "name": "sfabingo",
   "version": "1.0.0",
-  "description": "A bingo game designed for the Learn with Leon twitch and Discord communities.",
+  "description": "A bingo game designed for the SFA communities.",
   "main": "main.js",
   "type" : "module",
   "scripts": {
@@ -9,22 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/citizen-snipz/leonBingo.git"
+    "url": "https://github.com/moonlighter-dev/bingo"
   },
   "keywords": [
     "Bingo",
-    "Leonnoel",
-    "Leon",
-    "Learning",
+    "SFA",
+    "Robert Carpenter",
+    "Dana Arroway",
     "Javascript",
     "CSS",
     "z-index",
     "Game"
   ],
-  "author": "github.com/mightykrakyn",
+  "author": "github.com/moonlighter-dev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/citizen-snipz/leonBingo/issues"
+    "url": "https://github.com/moonlighter-dev/bingo/issues"
   },
-  "homepage": "https://github.com/citizen-snipz/leonBingo#readme"
+  "homepage": "https://github.com/moonlighter-dev/bingo/#readme"
 }

@@ -1,4 +1,4 @@
-const fullPhraseBank = [...phraseBank];
+const currentPhraseBank = document.getElementById("phraseBankSelect");
 const boardSquares = document.querySelectorAll("td");
 const table = document.querySelector("tbody");
 const hiddenElements = document.querySelectorAll("[hidden]");

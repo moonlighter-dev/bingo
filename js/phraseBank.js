@@ -1,9 +1,7 @@
-/**
- * @typedef {Array} phraseBank
- * @description This is where we store all of our phrases that we want to use for bingo tiles.
- */
+// These are the phraseBanks used for bingo tiles.
+// Current Phrasebanks: DOS, Robertisms
 
-const phraseBank = [
+const dos = [
   "43",
   '"What does that MEAN? ✨✨"',
   "OVERTIME ⏲️",
@@ -47,4 +45,30 @@ const phraseBank = [
   "You visited your college 🏆",
   "You signed FERPA ⚙️",
   "You joined Parent Connection 🧼",
-];
+]
+
+const robertisms = [
+  'need a hug',
+  'In da club',
+  'Plethora',
+  'The possibilities... endless',
+  'RRQ',
+  'Whew child',
+  'Rough in da club',
+  'Be proactive not reactive',
+  'Girrrrrrl',
+  'Amarillo by morning',
+  'Pivot',
+  "Axe 'Em",
+  'The fact is-',
+  'Sleep alumberly',
+  'No stress just bless',
+  'Urge to merge',
+  'Arugula',
+  'Cackle cacle cackle',
+  'Capiche',
+  "Let's unpack that",
+  'Question mark',
+  'Scurgy scurg',
+  'Mindful',
+]

@@ -5,21 +5,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SFA Dean of Students Bingo</title>
+    <title>SFA Bingo</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="Dean bingo" content="Bingo with the Dean" />
+    <meta name="SFA Bingo" content="Bingo at SFA" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script src="js/phraseBank.js"></script>
-    <script src="js/weeklyPhrases.js"></script>
   </head>
   <body>
     <header>
-      <h1 id="headerAtTop">DOS Bingo!</h1>
+      <h1 id="headerAtTop">SFA Bingo!</h1>
     </header>
-
-    <button id="createBoard">Create Board</button>
+    <form id="start-form">
+      <label for="phraseBankSelect">Choose your Bingo:</label>
+      <select id="phraseBankSelect">
+          <option value="robertisms">Robertisms</option>
+          <option value="dos">DOS</option>
+      </select>
+      <button type="button" id="createBoard">Create Board</button>
+  </form>
     <section id="btnContainer">
       <button id="shuffle" hidden="true">Shuffle the Board</button>
       <div>
@@ -81,6 +86,7 @@
       </table>
     </section>
     <footer>
+      <!-- TODO: Add link to instructions/form for creating a bingo -- this could be a quick modal -->
       <a href="https://sfasu.edu"><img src="img/sfaut-primary-mark-white.png"></a>
       <p
         >Thanks for playing! You can check out the code for this project here:
