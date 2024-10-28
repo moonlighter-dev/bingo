@@ -40,6 +40,8 @@ const winningCombos = [
  */
 
 function createBoard() {
+  btnContainer.style.margin = 0;
+
   let boardPhrases = [];
   let currentPhraseBank = []
 
@@ -118,10 +120,10 @@ function winningCondition() {
 function victory() {
   freeSpace.className = "victory";
   setTimeout(() => {
-    freeSpace.innerHTML = `<span>
-    \n
-    \n
-  CONGRATS! 😃 
+    freeSpace.innerHTML = `
+    <img src="/img/spirit-logo-purple-rgb.png">
+    <span>
+  YOU WIN! 😃 
   🎉🎉🎉
   </span>`;
   }, 300);

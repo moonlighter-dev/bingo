@@ -12,7 +12,7 @@ html, body {
 
 body {
   background-color: #5F259F;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: Avenir, Geneva, sans-serif;
   margin: 0 auto;
   color: #D8C4E0;
   text-shadow: 1px 1px 8px #75787B;
@@ -52,7 +52,6 @@ div span {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
   position: absolute;
   z-index: 1;
 }
@@ -103,6 +102,25 @@ section button {
   opacity: 0.6;
 }
 
+/* Board styles */
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+td {
+  border: 1px outset #060808;
+  color: #fff;
+  box-shadow: 2px 2px #75787B, -1px -1px #75787B;
+  width: 85px;
+  height: 85px;
+  position: relative;
+  text-align: center;
+  background-color: hsl(191, 48%, 60%);
+}
+
 /* Behavioral styles */
 
 #createBoard {
@@ -118,8 +136,8 @@ section button {
   font-size: 30px;
   font-weight: 600;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-top: 300px;
-  margin-bottom: 450px;
+  margin-top: 30px;
+  margin-bottom: 45px;
   transition: 0.4s;
   opacity: 0.6;
 }
@@ -143,9 +161,7 @@ section button {
 }
 
 .victory {
-  background: url("../img/spirit-logo-purple-rgb.png");
   background-color: #D8C4E0;
-  background-size: cover;
   animation-name: winner;
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
@@ -157,9 +173,6 @@ section button {
 #createBoard:hover {
   transform: scale(1.5) translateY(-33px);
   opacity: 1;
-  box-shadow: 0 5px 1px -2px #88DBDF,
-    0 10px 1px -4px #A9C47F, 0 15px 1px -6px #008675,
-    0 18px 1px -8px #D8C4E0;
 }
 
 #btnContainer button:hover {
@@ -224,27 +237,7 @@ td:hover {
     opacity: 1;
     box-shadow: none;
     white-space: pre-line;
-    padding-top: 25px;
   }
-}
-
-/* Board styles */
-
-table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-}
-
-td {
-  border: 1px outset #060808;
-  color: #fff;
-  box-shadow: 2px 2px #75787B, -1px -1px #75787B;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  text-align: center;
-  background-color: hsl(191, 48%, 60%);
 }
 
 /* Responsive styles */
@@ -272,8 +265,8 @@ td {
 
   #createBoard {
     font-size: 20px;
-    margin-top: 100px; /* Adjust margins */
-    margin-bottom: 150px;
+    margin-top: 10px; /* Adjust margins */
+    margin-bottom: 20px;
   }
 
   table {
@@ -282,8 +275,9 @@ td {
   }
 
   td {
-    width: 80px;
-    height: 80px; /* Smaller table cells */
+    font-size: .8rem;
+    max-width: 85px;
+    height: 85px; 
   }
 
   footer {

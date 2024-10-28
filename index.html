@@ -13,22 +13,6 @@
     <header>
       <h1 id="headerAtTop">SFA BINGO!</h1>
     </header>
-    <section id="btnContainer">
-        <select id="phraseBankSelect">
-          <option value="">--Choose your Bingo:--</option>
-          <option id="robertisms" value="robertisms">Robertisms</option>
-          <option id="dos" value="dos">DOS</option>
-      </select>
-      <button type="button" id="createBoard">New Board</button>
-      <div>
-        <button id="coverAll" hidden="true">Cover-all Mode: Off</button>
-        <!-- <span
-          >Cover-all Mode will only alert you of a win if every space is
-          stamped. We suggest getting a regular bingo first before turning this
-          feature on!</span
-        > -->
-      </div>
-    </section>
     <section id="main">
       <table id="bingoBoard" hidden="true">
         <tbody>
@@ -77,6 +61,23 @@
           </tr>
         </tbody>
       </table>
+    </section>
+    <section id="btnContainer">
+        <select id="phraseBankSelect">
+          <option value="">--Choose your Bingo:--</option>
+          <option id="robertisms" value="robertisms">Robertisms</option>
+          <option id="dos" value="dos">DOS</option>
+      </select>
+      <button type="button" id="createBoard">New Board</button>
+      <section>
+        <button id="coverAll" hidden="true">Cover-all Mode: Off</button>
+      <!-- <span
+        >Cover-all Mode will only alert you of a win if every space is
+        stamped. We suggest getting a regular bingo first before turning this
+        feature on!</span
+      > -->
+      </section>
+      
     </section>
     <footer>
       <!-- <a href="https://sfasu.edu"><img src="img/sfaut-primary-mark-white.png" height="100"></a> -->
