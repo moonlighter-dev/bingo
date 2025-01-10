@@ -1,6 +1,6 @@
 const phraseBankSelect = document.getElementById("phraseBankSelect");
 const createBoardButton = document.getElementById("createBoard");
-
+const inGameWelcome = document.getElementById("gameWelcome");
 const mainSection = document.getElementById("main");
 const boardSquares = document.querySelectorAll("td");
 const table = document.querySelector("tbody");
@@ -43,7 +43,8 @@ function createBoard() {
   btnContainer.style.margin = 0;
 
   let boardPhrases = [];
-  let currentPhraseBank = []
+  let currentPhraseBank = [];
+  let currentWelcome = "";
 
   const selectedBank = phraseBankSelect.options[phraseBankSelect.selectedIndex].value;
   console.log("Using this phrasebank: " + selectedBank)
@@ -51,14 +52,18 @@ function createBoard() {
   switch (selectedBank) {
     case "dos":
       currentPhraseBank = [...dos]
+      currentWelcome = dosGameWelcome
       break;
     case "robertisms":
       currentPhraseBank = [...robertisms]
+      currentWelcome = robertismsWelcome
       break;
     default:
       console.warn("No valid phrase bank selected");
       return;
   }
+
+  inGameWelcome.innerText = currentWelcome;
 
   for (let i = 0; i < 25; i++) {
     if (i === 12) {
@@ -90,6 +95,11 @@ function createBoard() {
   }
 
   for (let i = 0; i < 25; i++) {
+    if (boardSquares[i].classList.contains("stamp")){
+      if (i != 12){
+        boardSquares[i].classList.remove("stamp");
+      }
+    }
     boardSquares[i].innerHTML = boardPhrases.shift();
   }
   hiddenElements.forEach((element) => (element.hidden = false));

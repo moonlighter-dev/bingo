@@ -1,5 +1,6 @@
 // These are the phraseBanks used for bingo tiles.
 // Current Phrasebanks: DOS, Robertisms
+const dosGameWelcome = "You are playing Dean of Students Secret Bingo!"
 
 const dos = [
   "43",
@@ -22,7 +23,7 @@ const dos = [
   "ESA's & Service Animals 🐶",
   "You're a lumberjack now! ",
   "The 80's 😎",
-  '🌶️🌶️🌶️',
+  '🌶️🌶️🌶️ spicy',
   'Illegal surge protectors',
   'You asked for HELP 🆘',
   'FERPA!',
@@ -35,7 +36,7 @@ const dos = [
   '"Not a Judgment-Free Zone"',
   '"Ask me 4 questions"',
   'Counselor + Principal = Dean 🎓',
-  'Communication 💬',
+  'Communicay-shun 💬',
   'Student Food Pantry 🥫🥫',
   "Margaritas!",
   '"We could be friends!"',
@@ -46,6 +47,8 @@ const dos = [
   "You signed FERPA ⚙️",
   "You joined Parent Connection 🧼",
 ]
+
+const robertismsWelcome = "You are playing ResLife AC Robert Carpenter's Bingo!"
 
 const robertisms = [
   'need a hug 🤗',
@@ -72,4 +75,12 @@ const robertisms = [
   'Scurgy scurg ☠',
   'Mindful 😌',
   'BWA-HA-HA! 🤣'
+]
+
+const starRezisms = [
+  'Sarcastic enthusiasm',
+  'Donna gonna blow!',
+  'Where is Kat?',
+  'Remember, we signed up for this!',
+
 ]
